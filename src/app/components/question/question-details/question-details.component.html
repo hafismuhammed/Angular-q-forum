@@ -1,0 +1,15 @@
+<div class="container">
+<div *ngIf="question">
+    <h3>Q: {{ question.title }}</h3>
+    <h5 class="mb-5">{{ question.question }}</h5>
+    <div *ngFor="let answer of question.answers">
+        <p>{{ answer.answer }}</p>
+        <h6>- {{ answer.user.name }}</h6><hr>
+        
+    </div>
+
+</div>
+
+  
+<app-answer-question></app-answer-question>
+</div>
